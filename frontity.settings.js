@@ -4,7 +4,7 @@ const settings = {
     "frontity": {
       "url": "https://www.forgepress.dev",
       "title": "ForgePress",
-      "description": "A WordPress Community"
+      "description": "WordPress Community"
     }
   },
   "packages": [
