@@ -24,7 +24,8 @@ const settings = {
             [
               "Minecraft Server",
               "/servers/minecraft-java-latest"
-            ],
+            ]
+            /*,
             [
               "Marketplace",
               "/marketplace"
@@ -32,7 +33,7 @@ const settings = {
             [
               "About",
               "/about"
-            ]
+            ]*/
           ],
           "featured": {
             "showOnList": false,
