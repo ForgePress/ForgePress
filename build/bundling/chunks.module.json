@@ -1,53 +1,35 @@
 {
-  "errors": [
-    "./packages/mars-theme/src/index.js\nModule build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\Users\\Hudson Atwell\\Local Sites\\ForgePress\\ForgePress\\packages\\mars-theme\\src\\index.js'\n @ ./build/bundling/entry-points/forgepress/client.ts 1:46-119 1:352-380 1:521-1249 1:704-1248 1:798-839\n @ multi webpack-hot-middleware/client ./build/bundling/entry-points/forgepress/client.ts"
-  ],
+  "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "54dd3d99ce9f1df0f0e9",
+  "hash": "9e81bab934b3f6eff15c",
   "publicPath": "/static/",
   "outputPath": "C:\\Users\\Hudson Atwell\\Local Sites\\ForgePress\\ForgePress\\build\\static",
   "assetsByChunkName": {
-    "forgepress": [
-      "forgepress.module.js",
-      "forgepress.c6717b99a572349201bb.hot-update.js"
-    ]
+    "forgepress": "forgepress.module.js",
+    "list": "list.module.js"
   },
   "assets": [
     {
-      "name": "c6717b99a572349201bb.hot-update.json",
-      "size": 65,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
-    {
-      "name": "forgepress.c6717b99a572349201bb.hot-update.js",
-      "size": 2431,
-      "chunks": [
-        "forgepress"
-      ],
-      "chunkNames": [
-        "forgepress"
-      ],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
-    {
       "name": "forgepress.module.js",
-      "size": 4947539,
+      "size": 5279047,
       "chunks": [
         "forgepress"
       ],
       "chunkNames": [
         "forgepress"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "list.module.js",
+      "size": 50507,
+      "chunks": [
+        "list"
+      ],
+      "chunkNames": [
+        "list"
       ],
       "info": {},
       "emitted": false
@@ -60,8 +42,7 @@
         "forgepress"
       ],
       "assets": [
-        "forgepress.module.js",
-        "forgepress.c6717b99a572349201bb.hot-update.js"
+        "forgepress.module.js"
       ],
       "children": {},
       "childAssets": {}
@@ -73,8 +54,17 @@
         "forgepress"
       ],
       "assets": [
-        "forgepress.module.js",
-        "forgepress.c6717b99a572349201bb.hot-update.js"
+        "forgepress.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "list": {
+      "chunks": [
+        "list"
+      ],
+      "assets": [
+        "list.module.js"
       ],
       "children": {},
       "childAssets": {}
@@ -83,7 +73,7 @@
   "logging": {
     "webpack.buildChunkGraph.visitModules": {
       "entries": [],
-      "filteredEntries": 2,
+      "filteredEntries": 5,
       "debug": false
     }
   },

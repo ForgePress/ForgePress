@@ -4,7 +4,7 @@ const settings = {
     "frontity": {
       "url": "https://www.forgepress.dev",
       "title": "ForgePress",
-      "description": "WordPress Community"
+      "description": "A WordPress Gaming Community"
     }
   },
   "packages": [
@@ -22,7 +22,7 @@ const settings = {
               "/discord"
             ],
             [
-              "MineCraft Server",
+              "Minecraft Server",
               "/servers/minecraft-java-latest"
             ],
             [
