@@ -18,7 +18,7 @@ const settings = {
               "/"
             ],
             [
-              "Discord",
+              "Discord Server",
               "/discord"
             ],
             [
