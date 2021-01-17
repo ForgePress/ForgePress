@@ -27,11 +27,11 @@ const settings = {
             ],
             [
               "Marketplace",
-              "/marketplace/"
+              "/marketplace"
             ],
             [
-              "About Us",
-              "/about-us/"
+              "About",
+              "/about"
             ]
           ],
           "featured": {
