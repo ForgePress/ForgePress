@@ -23,7 +23,7 @@ const settings = {
             ],
             [
               "MineCraft Server",
-              "/servers/minecraft-java"
+              "/servers/minecraft-java-latest"
             ],
             [
               "Marketplace",
