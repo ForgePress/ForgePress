@@ -22,7 +22,7 @@ const settings = {
               "/discord"
             ],
             [
-              "MineCraft",
+              "MineCraft Server",
               "/servers/minecraft-java"
             ],
             [
