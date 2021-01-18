@@ -2,20 +2,17 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "e8f51d492c09039066b7",
+  "hash": "bf6a79bcf3b42388b677",
   "publicPath": "/static/",
   "outputPath": "C:\\Users\\Hudson Atwell\\Local Sites\\ForgePress\\ForgePress\\build\\static",
   "assetsByChunkName": {
     "archive": "archive.module.js",
-    "forgepress": [
-      "forgepress.module.js",
-      "forgepress.f5acab5ecfcc290fb9ae.hot-update.js"
-    ]
+    "forgepress": "forgepress.module.js"
   },
   "assets": [
     {
       "name": "archive.module.js",
-      "size": 87587,
+      "size": 89499,
       "chunks": [
         "archive"
       ],
@@ -23,17 +20,6 @@
         "archive"
       ],
       "info": {},
-      "emitted": false
-    },
-    {
-      "name": "f5acab5ecfcc290fb9ae.hot-update.json",
-      "size": 52,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
       "emitted": false
     },
     {
@@ -53,23 +39,8 @@
       "emitted": false
     },
     {
-      "name": "forgepress.f5acab5ecfcc290fb9ae.hot-update.js",
-      "size": 14284,
-      "chunks": [
-        "forgepress"
-      ],
-      "chunkNames": [
-        "forgepress"
-      ],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
-    {
       "name": "forgepress.module.js",
-      "size": 10389169,
+      "size": 10395555,
       "chunks": [
         "forgepress"
       ],
@@ -81,7 +52,7 @@
     },
     {
       "name": "images/pattern-tile-green.svg",
-      "size": 74467,
+      "size": 74553,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -103,8 +74,7 @@
         "forgepress"
       ],
       "assets": [
-        "forgepress.module.js",
-        "forgepress.f5acab5ecfcc290fb9ae.hot-update.js"
+        "forgepress.module.js"
       ],
       "children": {},
       "childAssets": {}
@@ -116,8 +86,7 @@
         "forgepress"
       ],
       "assets": [
-        "forgepress.module.js",
-        "forgepress.f5acab5ecfcc290fb9ae.hot-update.js"
+        "forgepress.module.js"
       ],
       "children": {},
       "childAssets": {}
