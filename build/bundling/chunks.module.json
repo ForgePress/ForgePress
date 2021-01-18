@@ -2,17 +2,74 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "9e81bab934b3f6eff15c",
+  "hash": "e8f51d492c09039066b7",
   "publicPath": "/static/",
   "outputPath": "C:\\Users\\Hudson Atwell\\Local Sites\\ForgePress\\ForgePress\\build\\static",
   "assetsByChunkName": {
-    "forgepress": "forgepress.module.js",
-    "list": "list.module.js"
+    "archive": "archive.module.js",
+    "forgepress": [
+      "forgepress.module.js",
+      "forgepress.f5acab5ecfcc290fb9ae.hot-update.js"
+    ]
   },
   "assets": [
     {
+      "name": "archive.module.js",
+      "size": 87587,
+      "chunks": [
+        "archive"
+      ],
+      "chunkNames": [
+        "archive"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "f5acab5ecfcc290fb9ae.hot-update.json",
+      "size": 52,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "fonts/KelsonSans-Bold.ttf",
+      "size": 67072,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "fonts/KelsonSans-Bold.woff",
+      "size": 21548,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "forgepress.f5acab5ecfcc290fb9ae.hot-update.js",
+      "size": 14284,
+      "chunks": [
+        "forgepress"
+      ],
+      "chunkNames": [
+        "forgepress"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
       "name": "forgepress.module.js",
-      "size": 5279047,
+      "size": 10389169,
       "chunks": [
         "forgepress"
       ],
@@ -23,14 +80,18 @@
       "emitted": false
     },
     {
-      "name": "list.module.js",
-      "size": 50507,
-      "chunks": [
-        "list"
-      ],
-      "chunkNames": [
-        "list"
-      ],
+      "name": "images/pattern-tile-green.svg",
+      "size": 74467,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "images/pattern-tile-light-fade.svg",
+      "size": 95727,
+      "chunks": [],
+      "chunkNames": [],
       "info": {},
       "emitted": false
     }
@@ -42,7 +103,8 @@
         "forgepress"
       ],
       "assets": [
-        "forgepress.module.js"
+        "forgepress.module.js",
+        "forgepress.f5acab5ecfcc290fb9ae.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -54,17 +116,18 @@
         "forgepress"
       ],
       "assets": [
-        "forgepress.module.js"
+        "forgepress.module.js",
+        "forgepress.f5acab5ecfcc290fb9ae.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
     },
-    "list": {
+    "archive": {
       "chunks": [
-        "list"
+        "archive"
       ],
       "assets": [
-        "list.module.js"
+        "archive.module.js"
       ],
       "children": {},
       "childAssets": {}
