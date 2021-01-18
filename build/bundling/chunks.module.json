@@ -1,22 +1,33 @@
 {
-  "errors": [
-    "./packages/frontity-chakra-theme/src/index.js\nModule build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\Users\\Hudson Atwell\\Local Sites\\ForgePress\\ForgePress\\packages\\frontity-chakra-theme\\src\\index.js'\n @ ./build/bundling/entry-points/forgepress/client.ts 1:46-121 1:354-383 1:524-1256 1:708-1255 1:803-845\n @ multi webpack-hot-middleware/client ./build/bundling/entry-points/forgepress/client.ts"
-  ],
+  "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "52206e3669ec997f9ca4",
+  "hash": "e8f51d492c09039066b7",
   "publicPath": "/static/",
   "outputPath": "C:\\Users\\Hudson Atwell\\Local Sites\\ForgePress\\ForgePress\\build\\static",
   "assetsByChunkName": {
+    "archive": "archive.module.js",
     "forgepress": [
       "forgepress.module.js",
-      "forgepress.e8f51d492c09039066b7.hot-update.js"
+      "forgepress.f5acab5ecfcc290fb9ae.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "e8f51d492c09039066b7.hot-update.json",
-      "size": 68,
+      "name": "archive.module.js",
+      "size": 87587,
+      "chunks": [
+        "archive"
+      ],
+      "chunkNames": [
+        "archive"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "f5acab5ecfcc290fb9ae.hot-update.json",
+      "size": 52,
       "chunks": [],
       "chunkNames": [],
       "info": {
@@ -26,8 +37,24 @@
       "emitted": false
     },
     {
-      "name": "forgepress.e8f51d492c09039066b7.hot-update.js",
-      "size": 20033,
+      "name": "fonts/KelsonSans-Bold.ttf",
+      "size": 67072,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "fonts/KelsonSans-Bold.woff",
+      "size": 21548,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "forgepress.f5acab5ecfcc290fb9ae.hot-update.js",
+      "size": 14284,
       "chunks": [
         "forgepress"
       ],
@@ -42,13 +69,29 @@
     },
     {
       "name": "forgepress.module.js",
-      "size": 4947687,
+      "size": 10389169,
       "chunks": [
         "forgepress"
       ],
       "chunkNames": [
         "forgepress"
       ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "images/pattern-tile-green.svg",
+      "size": 74467,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "images/pattern-tile-light-fade.svg",
+      "size": 95727,
+      "chunks": [],
+      "chunkNames": [],
       "info": {},
       "emitted": false
     }
@@ -61,7 +104,7 @@
       ],
       "assets": [
         "forgepress.module.js",
-        "forgepress.e8f51d492c09039066b7.hot-update.js"
+        "forgepress.f5acab5ecfcc290fb9ae.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -74,7 +117,17 @@
       ],
       "assets": [
         "forgepress.module.js",
-        "forgepress.e8f51d492c09039066b7.hot-update.js"
+        "forgepress.f5acab5ecfcc290fb9ae.hot-update.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "archive": {
+      "chunks": [
+        "archive"
+      ],
+      "assets": [
+        "archive.module.js"
       ],
       "children": {},
       "childAssets": {}
@@ -83,7 +136,7 @@
   "logging": {
     "webpack.buildChunkGraph.visitModules": {
       "entries": [],
-      "filteredEntries": 2,
+      "filteredEntries": 5,
       "debug": false
     }
   },
