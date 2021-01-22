@@ -2,6 +2,26 @@ import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 import processors from "./components/styles/processors";
 
+const featuredPosts = {
+  name: "featured",
+  priority: 10,
+  pattern: "featured",
+  func: async ({ route, state, libraries }) => {
+
+    const { api } = libraries.source;
+
+    const response = await api.get({
+      endpoint: "/wp/v2/posts/",
+      params: { include : state.theme.featuredPosts , orderby : "include" }
+    });
+
+    const items = await response.json();
+
+    Object.assign(state.source.data[route], {
+      items: items,
+    });
+  }
+};
 
 const menuHandler = {
   name: "menus",
@@ -98,10 +118,18 @@ const chakraTheme = {
   actions: {
     theme: {
       beforeCCR: async ({ state, actions , libraries}) => {
+        libraries.source.handlers.push(featuredPosts);
         libraries.source.handlers.push(menuHandler);
       },
       beforeSSR: async ({ state, actions , libraries }) => {
+
         libraries.source.handlers.push(menuHandler);
+        libraries.source.handlers.push(featuredPosts);
+
+        if (state.router.link == "/") {
+          await actions.source.fetch("featured");
+        }
+
         await actions.source.fetch(state.router.link);
         await actions.source.fetch("menus/header");
       },

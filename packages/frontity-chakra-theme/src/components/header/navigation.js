@@ -59,8 +59,6 @@ const SiteMenuItem = ({ link, ...props }) => (
 const Navigation = ({ menu, state , libraries , ...props }) => {
     const {items}   = state.source.get("menus/header");
 
-    //console.log("Items");
-    //console.log(items);
     return (
         <Box as="nav" width="100%" display={{ base: "none", lg: "block" }} {...props}>
             <SiteMenu>

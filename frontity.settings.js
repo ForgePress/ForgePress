@@ -25,7 +25,10 @@ const settings = {
           logo: "ForgePress",
           showBackgroundPattern: true,
           showSocialLinks: true,
-          featured_pages: [4,42,44],
+          featuredPosts: [4,42,44],
+          redirects: {
+            "/minecraft-survival-java/": "/servers/minecraft-java-latest/"
+          },
           autoPreFetch: "all",
           socialLinks: [
             ["twitter", "https://www.twitter.com/forgepresswp/"],

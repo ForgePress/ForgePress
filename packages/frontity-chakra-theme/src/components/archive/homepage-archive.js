@@ -9,14 +9,13 @@ import { PaginationButton } from "./pagination";
 
 const HomepageArchive = ({ state, libraries }) => {
   // Get the data of the current list.
-  const data = state.source.get(state.router.link);
-
-  const [firstThreePosts, othersPosts] = splitPosts(state, data.items);
+  const posts = state.source.get(state.router.link);
+  const featured  = state.source.get('featured');
 
   return (
     <Box bg="accent.50" as="section">
       <FeaturedPostSection
-        data={firstThreePosts.map(post => formatPostData(state, post))}
+        data={featured.items.map(post => formatPostData(state, post))}
       />
       <Box
         py={{ base: "64px", md: "80px" }}
@@ -39,8 +38,15 @@ const HomepageArchive = ({ state, libraries }) => {
           columns={{ base: 1, md: 2 }}
           spacing="40px"
         >
-          {othersPosts.map(({ type, id }) => {
+          {posts.items.map(({ type, id }) => {
+
             const item = state.source[type][id];
+
+            // skip featured items
+            if (state.theme.featuredPosts.includes(item.id)) {
+                  return;
+            }
+
             return <ArchiveItem key={item.id} item={item} />;
           })}
         </SimpleGrid>
