@@ -5,6 +5,16 @@ const settings = {
       "url": "https://www.forgepress.dev",
       "title": "ForgePress",
       "description": "A WordPress Community"
+    },
+    analytics: {
+      pageviews: {
+        googleAnalytics: true,
+        comscoreAnalytics: false
+      },
+      events: {
+        googleAnalytics: false,
+        comscoreAnalytics: false
+      }
     }
   },
   "packages": [
@@ -16,6 +26,7 @@ const settings = {
           showBackgroundPattern: true,
           showSocialLinks: true,
           featured_pages: [4,42,44],
+          autoPreFetch: "all",
           socialLinks: [
             ["twitter", "https://www.twitter.com/forgepresswp/"],
             ["discord", "https://discord.gg/gqUSmgc"]
@@ -44,8 +55,8 @@ const settings = {
              ]*/
           ],
           "featured": {
-            "showOnList": false,
-            "showOnPost": false
+            "showOnList": true,
+            "showOnPost": true
           },
           // color shades to use in the blog
           colors: {
@@ -81,12 +92,26 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          /*"url": "https://wordpress.forgepress.dev"*/
-          "url": "https://staging.forgepress.dev"
+          "url": "https://staging.forgepress.dev",
+        },
+      }
+    },
+    {
+      name: "@frontity/google-analytics",
+      state: {
+        googleAnalytics: {
+          trackingId: "G-JFE88F496",
+        }
+      },
+    },
+    {
+      name: "@frontity/tiny-router",
+      state: {
+        router: {
+          autoFetch: false
         }
       }
     },
-    "@frontity/tiny-router",
     "@frontity/html2react"
   ]
 };
