@@ -59,22 +59,14 @@ const Theme = ({ state, libraries }) => {
         mt={{ base: "40px", md: "70px" }}
         minH="calc(100vh - 320px)"
       >
-        {/* This is causing the homepage to break at the moment */}
         {<Switch>
-          <Loading when={data.isFetching} />
-          <Post when={data.isPostType} />
-          <Page404 when={data.is404} />
-          <SearchResults when={isSearch} />
-        </Switch>}
-
-        {(data.isFetching && <Loading />) ||
-      (isSearch && <SearchResults />) ||
-      (data.isArchive && <Archive />) ||
-      (data.isPostType && <Post />) ||
-      (data.is404 && <Page404 />)}
-
-
-
+         <Loading when={data.isFetching} />
+         <SearchResults when={isSearch} />
+         <Archive when={data.isArchive} />
+         <Loading when={data.isFetching} />
+         <Post when={data.isPostType} />
+         <Page404 when={data.is404} />
+         </Switch>}
       </Box>
 
       <Footer />
