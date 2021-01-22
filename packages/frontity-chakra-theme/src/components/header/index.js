@@ -5,9 +5,9 @@ import Navigation from "./navigation";
 import SocialNav from "./social-menu";
 import { SearchButton, SearchModal, SearchForm } from "../search";
 
-const Header = ({ state, actions }) => (
+const Header = ({ state, actions , libraries }) => (
   <MainHeader>
-    <Navigation menu={state.theme.menu} />
+    <Navigation menu={state.theme.menu} state={state} libraries={libraries}  />
     {state.theme.showSocialLinks && (
       <SocialNav menu={state.theme.socialLinks} />
     )}

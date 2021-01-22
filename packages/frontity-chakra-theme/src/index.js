@@ -1,8 +1,34 @@
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 import processors from "./components/styles/processors";
-// import { theme } from "@chakra-ui/core";
 
+
+const menuHandler = {
+  name: "menus",
+  priority: 10,
+  pattern: "menus/:id",
+  func: async ({ route, params, state, libraries }) => {
+
+    const { api } = libraries.source;
+    const { id } = params;
+
+    const response = await api.get({
+      endpoint: "/menus/v1/menus/" + id,
+    });
+
+    const items = await response.json();
+
+    const currentPageData = state.source.data[route];
+
+    Object.assign(currentPageData, {
+      id,
+      items: items.items,
+      isMenu: true
+    });
+  }
+};
+
+// import { theme } from "@chakra-ui/core";
 const chakraTheme = {
   name: "frontity-chakra-theme",
   roots: {
@@ -71,6 +97,14 @@ const chakraTheme = {
   // Frontity like libraries.
   actions: {
     theme: {
+      beforeCCR: async ({ state, actions , libraries}) => {
+        libraries.source.handlers.push(menuHandler);
+      },
+      beforeSSR: async ({ state, actions , libraries }) => {
+        libraries.source.handlers.push(menuHandler);
+        await actions.source.fetch(state.router.link);
+        await actions.source.fetch("menus/header");
+      },
       openMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = true;
       },
@@ -91,7 +125,17 @@ const chakraTheme = {
       // inside the content HTML. You can add your own processors too.
       processors: [image, ...processors]
     }
-  }
+  },
+  "packages": [
+    {
+      "name": "@frontity/wp-source",
+      "state": {
+        "source": {
+          handlers: [menuHandler]
+        },
+      }
+    }
+  ]
 };
 
 export default chakraTheme;
