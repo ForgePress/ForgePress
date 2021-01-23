@@ -11,6 +11,7 @@ import Post from "./post/post";
 import SearchResults from "./search";
 import Title from "./title";
 import FontFace from "./styles/font-face";
+import CSSTOC from "./custom-css/toc";
 import { useTransition, animated } from 'react-spring'
 
 // Theme is the root React component of our theme. The one we will export
@@ -41,6 +42,7 @@ const Theme = ({ state, libraries }) => {
       }}
     >
       <FontFace />
+      <CSSTOC />
       <CSSReset />
       {/* Add some metatags to the <head> of the HTML. */}
       <Title />
@@ -48,7 +50,6 @@ const Theme = ({ state, libraries }) => {
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
       </Head>
-
       {/* Add the header of the site. */}
       <Header />
 
