@@ -29,6 +29,12 @@ const Link = ({
     // Do nothing if it's an external link
     if (isExternal || isDisabled) return;
 
+    // Verify if it's an internal section
+    if (link.startsWith('#')) {
+      document.getElementById(link.substring(1)).scrollIntoView();
+      return;
+    }
+
     event.preventDefault();
     // Set the router to the new url.
     actions.router.set(link);

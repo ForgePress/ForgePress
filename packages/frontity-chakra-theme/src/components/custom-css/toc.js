@@ -5,6 +5,9 @@ import { Global , css } from "frontity";
 const CSSTOC = () => (
     <Global
         styles={css`
+        html {
+          scroll-behavior: smooth;
+        }
         .gutentoc-toc-wrap ul li a {
             font-weight: normal;
             font-size: 95%;
