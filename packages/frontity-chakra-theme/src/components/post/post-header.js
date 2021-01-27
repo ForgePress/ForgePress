@@ -3,6 +3,7 @@ import React from "react";
 import Link from "../link";
 import PostCategories from "./post-categories";
 import { formatDate } from "../helpers";
+import { PatternBox, PatternBoxInner } from "../styles/pattern-box";
 
 const PostHeader = ({
   heading,
@@ -13,39 +14,18 @@ const PostHeader = ({
   isPage,
   ...props
 }) => (
-  <Box textAlign="center" {...props}>
-    {categories && (
-      <PostCategories
-        color="black"
-        categories={categories}
-        justifyContent="center"
-      />
-    )}
-    <Heading
-      fontWeight="bold"
-      size="2xl"
-      mt="30px"
-      mb={{ base: "20px", lg: "32px" }}
-      textTransform="uppercase"
-      dangerouslySetInnerHTML={{ __html: heading }}
-    />
-    {description && <Text mt={4}>{description}</Text>}
-    {/* Don't show the author if we're on a page type */}
-    {!isPage && author && (
-      <Text fontSize="lg">
-        by{" "}
-        <Link fontWeight="bold" color="accent.400" link={author.link}>
-          {author.name}
-        </Link>
-      </Text>
-    )}
-    {/* Don't show the date if we're on a page type */}
-    {!isPage && date && (
-      <Text fontSize="md" mt="12px">
-        {formatDate(date)}
-      </Text>
-    )}
-  </Box>
+    <PatternBox pb="80px" mb="-80px" {...props}>
+        <PatternBoxInner>
+            <Heading
+                mt="8px"
+                textTransform="uppercase"
+                fontSize={{ base: "5xl", md: "6xl" }}
+                color="accent.400"
+            >
+                {heading}
+            </Heading>
+        </PatternBoxInner>
+    </PatternBox>
 );
 
 export default PostHeader;

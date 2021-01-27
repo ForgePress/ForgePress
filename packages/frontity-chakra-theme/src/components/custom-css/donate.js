@@ -7,12 +7,9 @@ const DonateCSS = () => (
         styles={css`
 
        #post-box[data-route="/donate/"] #post-header {
-           display:none;
+           //display:none;
        }
 
-       #post-authorbox[data-route="/donate/"] {
-           display:none;
-       }
        #post-content[data-route="/donate/"] {
            max-width:95% !important;
            width:95% !important;
