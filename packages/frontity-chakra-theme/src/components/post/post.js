@@ -12,6 +12,7 @@ import PostProgressBar from "./post-progressbar";
 import { getPostData, formatPostData } from "../helpers";
 
 const Post = ({ state, actions, libraries }) => {
+
   const postData = getPostData(state);
   const post = formatPostData(state, postData);
 
@@ -32,8 +33,8 @@ const Post = ({ state, actions, libraries }) => {
   if (!postData.isReady) return null;
 
   return (
-    <LightPatternBox showPattern={state.theme.showBackgroundPattern} ref={ref}>
-      <Box pb={{ base: "2rem", lg: "50px" }}>
+    <LightPatternBox showPattern={state.theme.showBackgroundPattern} ref={ref} id="post-box" data-route={state.router.link}>
+      <Box pb={{ base: "2rem", lg: "50px" }} id="post-header" data-route={state.router.link}>
         <PostHeader
           mt={{ base: "20px", lg: "4rem" }}
           px={{ base: "32px", md: "0" }}
@@ -60,13 +61,15 @@ const Post = ({ state, actions, libraries }) => {
           px={{ base: "32px", md: "0" }}
           size="md"
           pt="50px"
+          id="post-content"
+          data-route={state.router.link}
         >
           <Html2React html={post.content} />
         </Content>
 
         <Divider borderBottom="1px solid" my="80px" />
 
-        <Section px={{ base: "32px", md: "0" }}>
+        <Section px={{ base: "32px", md: "0" }} id="post-authorbox" data-route={state.router.link}>
           <AuthorBio
             image={post.author.avatar_urls["96"]}
             name={post.author.name}
