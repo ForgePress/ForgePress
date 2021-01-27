@@ -99,7 +99,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://staging.forgepress.dev",
+          "url": "https://wordpress.forgepress.dev",
         },
       }
     },
