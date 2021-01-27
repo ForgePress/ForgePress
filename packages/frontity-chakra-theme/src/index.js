@@ -2,7 +2,7 @@ import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 import processors from "./components/styles/processors";
 
-const featuredPosts = {
+const featuredPostsHandler = {
   name: "featured",
   priority: 10,
   pattern: "featured",
@@ -13,6 +13,27 @@ const featuredPosts = {
     const response = await api.get({
       endpoint: "/wp/v2/posts/",
       params: { include : state.theme.featuredPosts , orderby : "include" }
+    });
+
+    const items = await response.json();
+
+    Object.assign(state.source.data[route], {
+      items: items,
+    });
+  }
+};
+
+const homeHandler = {
+  name: "home",
+  priority: 10,
+  pattern: "home",
+  func: async ({ route, state, libraries }) => {
+
+    const { api } = libraries.source;
+
+    const response = await api.get({
+      endpoint: "/wp/v2/posts/",
+      params: { slug : state.theme.homepage }
     });
 
     const items = await response.json();
@@ -48,6 +69,27 @@ const menuHandler = {
   }
 };
 
+const productsHandler = {
+  name: "products",
+  priority: 10,
+  pattern: "products/:slug", //Or whatever your pattern is
+  func: async ({ route, params, state, libraries }) => {
+    const { api } = libraries.source;
+    const { id } = params;
+
+    const response = await api.get({
+      endpoint: "/public-woo/v1/products/" + id,
+      params: {  }
+    });
+
+    const items = await response.json();
+
+    Object.assign(state.source.data[route], {
+      items: items,
+    });
+  }
+}
+
 // import { theme } from "@chakra-ui/core";
 const chakraTheme = {
   name: "frontity-chakra-theme",
@@ -65,7 +107,7 @@ const chakraTheme = {
        * logo : "Frontity"
        * logo: "https://uploads-ssl.webflow.com/5be00771820599586e6bd032/5be0223588110a6dbcac2d05_image.svg",
        */
-      logo: "Frontity",
+      logo: "ForgePress",
       showBackgroundPattern: true,
       showSocialLinks: true,
       /**
@@ -118,16 +160,25 @@ const chakraTheme = {
   actions: {
     theme: {
       beforeCCR: async ({ state, actions , libraries}) => {
-        libraries.source.handlers.push(featuredPosts);
+        libraries.source.handlers.push(featuredPostsHandler);
         libraries.source.handlers.push(menuHandler);
+
+        if (state.theme.homepage) {
+          libraries.source.handlers.push(homeHandler);
+        }
       },
       beforeSSR: async ({ state, actions , libraries }) => {
 
         libraries.source.handlers.push(menuHandler);
-        libraries.source.handlers.push(featuredPosts);
+        libraries.source.handlers.push(featuredPostsHandler);
 
         if (state.router.link == "/") {
           await actions.source.fetch("featured");
+
+          if (state.theme.homepage) {
+              libraries.source.handlers.push(homeHandler);
+              await actions.source.fetch("home");
+          }
         }
 
         await actions.source.fetch(state.router.link);
