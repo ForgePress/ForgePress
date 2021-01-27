@@ -27,7 +27,8 @@ const blockquote = makeProcessor("blockquote", {
   props: () => ({
     variant: "left-accent",
     status: "warning",
-    marginY: "20px"
+    marginY: "20px",
+    id: "blockquote"
   }),
   component: Callout
 });
