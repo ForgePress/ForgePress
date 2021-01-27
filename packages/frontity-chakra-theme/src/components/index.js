@@ -2,15 +2,19 @@ import { Box, CSSReset, theme, ThemeProvider } from "@chakra-ui/core";
 import { connect, Head } from "frontity";
 import React from "react";
 import Switch from "@frontity/components/switch";
+import Post from "./post/post";
 import Archive from "./archive";
 import Footer from "./footer";
 import Header from "./header";
 import Loading from "./loading";
 import Page404 from "./page404";
-import Post from "./post/post";
+
 import SearchResults from "./search";
 import Title from "./title";
 import FontFace from "./styles/font-face";
+import PostCSS from "./custom-css/post";
+import DonateCSS from "./custom-css/donate";
+import HomeCSS from "./custom-css/home";
 import CSSTOC from "./custom-css/toc";
 import { useTransition, animated } from 'react-spring'
 
@@ -42,7 +46,10 @@ const Theme = ({ state, libraries }) => {
       }}
     >
       <FontFace />
+      <PostCSS />
       <CSSTOC />
+      <DonateCSS />
+      <HomeCSS />
       <CSSReset />
       {/* Add some metatags to the <head> of the HTML. */}
       <Title />
