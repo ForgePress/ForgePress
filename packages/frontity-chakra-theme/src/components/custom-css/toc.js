@@ -15,7 +15,7 @@ const CSSTOC = () => (
 
         .gutentoc {
             margin-bottom: 1em;
-            width: auto;
+            width: 100%;
             display: table;
             font-size: 95%;
             background: #f9f9f9;
@@ -32,6 +32,7 @@ const CSSTOC = () => (
             font-weight: 700;
             font-size: 17px;
             line-height: 1.5;
+            margin-bottom: 10px;
         }
 
         .gutentoc-toc-title-wrap .gutentoc-toc-title {
@@ -63,21 +64,21 @@ const CSSTOC = () => (
         #open,
         #close {
             cursor: pointer;
+            display:none;
         }
 
+        .gutentoc-toc-title {
+            color:#fff;
+        }
         .gutentoc {
             background: #f9f9f9;
+            background: #4c464e;
             padding: 10px;
-            width: auto;
             display: table;
             -webkit-transition: width 2s, height 4s;
             /* For Safari 3.1 to 6.0 */
             -o-transition: width 2s, height 4s;
             transition: width 2s, height 4s;
-        }
-
-        .gutentoc.tocactive {
-            widows: 100%;
         }
 
         body .hide {
