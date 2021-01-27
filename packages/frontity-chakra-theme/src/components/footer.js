@@ -35,7 +35,7 @@ const Footer = ({ state }) => (
         fontFamily="heading"
         textTransform="uppercase"
       >
-        © {new Date().getFullYear()} Frontity
+        © {new Date().getFullYear()} ForgePress
       </FooterSectionItem>
 
       <FooterSectionItem borderColor="accent.400">

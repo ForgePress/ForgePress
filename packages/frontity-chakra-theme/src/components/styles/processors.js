@@ -12,9 +12,10 @@ function makeProcessor(tag, options) {
   return {
     name: tag,
     test: node => node.component === tag,
-    process: node => {
+    processor: ({node}) => {
       node.component = options.component;
       node.props = options.props(node);
+
       return node;
     },
     // allow for overriding this processors

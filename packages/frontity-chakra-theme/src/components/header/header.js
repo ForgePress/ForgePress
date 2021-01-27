@@ -15,6 +15,7 @@ const SiteHeader = props => (
     left="0"
     bg="primary.700"
     zIndex="90"
+    borderColor="accent.400"
     {...props}
   />
 );

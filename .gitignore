@@ -3,5 +3,8 @@
 /node_modules
 
 .vercel
-build
-build/*
+
+/build/
+/build/*
+/build
+package-lock.json

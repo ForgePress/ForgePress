@@ -56,16 +56,25 @@ const SiteMenuItem = ({ link, ...props }) => (
   </PseudoBox>
 );
 
-const Navigation = ({ menu, ...props }) => (
-  <Box as="nav" width="100%" display={{ base: "none", lg: "block" }} {...props}>
-    <SiteMenu>
-      {menu.map(([name, link]) => (
-        <SiteMenuItem key={name} link={link}>
-          {name}
-        </SiteMenuItem>
-      ))}
-    </SiteMenu>
-  </Box>
-);
+const Navigation = ({ menu, state , libraries , ...props }) => {
+    const {items}   = state.source.get("menus/header");
+
+    return (
+        <Box as="nav" width="100%" display={{ base: "none", lg: "block" }} {...props}>
+            <SiteMenu>
+                {items.map( item => {
+                    const name = item.title;
+                    const link = libraries.source.normalize(item.url);
+
+                    return (
+                        <SiteMenuItem key={name} link={link}>
+                            {name}
+                        </SiteMenuItem>
+                    );
+                })}
+            </SiteMenu>
+        </Box>
+    );
+}
 
 export default Navigation;

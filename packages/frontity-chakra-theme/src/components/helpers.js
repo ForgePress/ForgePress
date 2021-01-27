@@ -52,6 +52,17 @@ export function getPostData(state) {
 }
 
 export function formatPostData(state, post) {
+
+  /* strip URL from link so we just have paths remaining */
+  post.link = post.link.replace(state.source.url, "");
+
+  /* check if post path should be redirected somewhere else */
+  const redirects = state.theme.redirects;
+
+  if (typeof redirects[post.link] != 'undefined') {
+     post.link = redirects[post.link];
+  }
+
   return {
     id: post.id,
     author: getPostAuthor(state, post),

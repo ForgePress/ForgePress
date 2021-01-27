@@ -7,6 +7,9 @@ import {
   IoLogoFacebook,
   IoLogoInstagram
 } from "react-icons/io";
+import {
+    IoLogoDiscord
+} from "react-icons/io5";
 import Link from "../link";
 
 // warning for showSocialLinks and menu.length
@@ -42,7 +45,8 @@ const icons = {
   twitter: IoLogoTwitter,
   pinterest: IoLogoPinterest,
   facebook: IoLogoFacebook,
-  instagram: IoLogoInstagram
+  instagram: IoLogoInstagram,
+  discord: IoLogoDiscord
 };
 
 const SocialNav = ({ menu, ...props }) => (
