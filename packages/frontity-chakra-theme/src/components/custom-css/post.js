@@ -7,6 +7,7 @@ const PostCSS = (state) => (
         styles={css`
        #post-box {
            padding-top:0px;
+           margin-top: -7px;
        }
 
        #post-header {
