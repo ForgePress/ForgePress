@@ -22,17 +22,19 @@ const settings = {
       "name": "frontity-chakra-theme",
       "state": {
         "theme": {
-          logo: "ForgePress",
+          logo: "⛏ ForgePress",
           showBackgroundPattern: true,
           showSocialLinks: true,
           featuredPosts: [4,42,44],
+          homepage: "/welcome/",
           redirects: {
-            "/minecraft-survival-java/": "/servers/minecraft-java-latest/"
+            "/minecraft-survival-java/": "/servers/minecraft-java-latest/",
+            "/welcome/" : "#welcome"
           },
           autoPreFetch: "all",
           socialLinks: [
-            ["twitter", "https://www.twitter.com/forgepresswp/"],
-            ["discord", "https://discord.gg/gqUSmgc"]
+            ["discord", "https://discord.gg/gqUSmgc"],
+                ["twitter", "https://www.twitter.com/forgepresswp/"]
           ],
           "menu": [
             [
@@ -80,7 +82,9 @@ const settings = {
               "100": "#fbe3b2",
               "200": "#f6d086",
               "300": "#f1be58",
-              "400": "#eca419",
+              //"400": "#eca419",
+              //"400": "aliceblue",
+              "400": "lightgreen",
               "500": "#d49212",
               "600": "#a5710b",
               "700": "#775105",
