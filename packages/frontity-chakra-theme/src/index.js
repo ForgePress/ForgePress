@@ -162,25 +162,17 @@ const chakraTheme = {
       beforeCCR: async ({ state, actions , libraries}) => {
         libraries.source.handlers.push(featuredPostsHandler);
         libraries.source.handlers.push(menuHandler);
+        libraries.source.handlers.push(homeHandler);
 
-        if (state.theme.homepage) {
-          libraries.source.handlers.push(homeHandler);
-        }
       },
       beforeSSR: async ({ state, actions , libraries }) => {
 
         libraries.source.handlers.push(menuHandler);
         libraries.source.handlers.push(featuredPostsHandler);
+        libraries.source.handlers.push(homeHandler);
 
-        if (state.router.link == "/") {
-          await actions.source.fetch("featured");
-
-          if (state.theme.homepage) {
-              libraries.source.handlers.push(homeHandler);
-              await actions.source.fetch("home");
-          }
-        }
-
+        await actions.source.fetch("featured");
+        await actions.source.fetch("home");
         await actions.source.fetch(state.router.link);
         await actions.source.fetch("menus/header");
       },
