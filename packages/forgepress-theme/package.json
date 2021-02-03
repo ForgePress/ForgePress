@@ -1,0 +1,31 @@
+{
+  "name": "forgepress-theme",
+  "version": "0.0.2",
+  "description": "A frontity theme forked from Frontity Chakra Theme",
+  "keywords": [
+    "wordpress",
+    "frontity",
+    "frontity-theme",
+    "frontity-amp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ForgePress/ForgePress"
+  },
+  "author": "Hudson Atwell <hudson.atwell@gmail.com>, Segun Adebayo <sage@adebayosegun.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ForgePress/ForgePress/issues"
+  },
+  "homepage": "https://www.forgepress.dev",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "framer-motion" : "3.3.0-beta.22",
+    "@chakra-ui/react": "1.2.1",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "react-icons": "4.1.0"
+  }
+}
