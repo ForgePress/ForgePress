@@ -32,9 +32,6 @@ const HomepageSingle = ({ state, libraries }) => {
                 >
                     <Html2React html={post.content} />
                 </Content>
-
-                <Divider borderBottom="1px solid" my="80px" />
-
             </Section>
         </LightPatternBox>
     );

@@ -67,8 +67,6 @@ const Post = ({ state, actions, libraries }) => {
           <Html2React html={post.content} />
         </Content>
 
-        <Divider borderBottom="1px solid" my="80px" />
-
         <Section px={{ base: "32px", md: "0" }} id="post-authorbox" data-route={state.router.link}>
           <AuthorBio
             image={post.author.avatar_urls["96"]}
