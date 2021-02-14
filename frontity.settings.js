@@ -19,7 +19,7 @@ const settings = {
   },
   "packages": [
     {
-      "name": "frontity-chakra-theme",
+      "name": "forgepress-theme",
       "state": {
         "theme": {
           logo: "⛏ ForgePress",
