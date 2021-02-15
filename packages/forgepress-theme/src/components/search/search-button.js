@@ -10,14 +10,14 @@ const SearchButton = props => (
     alignItems="center"
     justifyContent="center"
     transition="background-color ease 0.25s"
-    _hover={{ bg: "white" }}
+    _hover={{ color: "white" }}
     flexShrink="0"
     size="46px"
-    bg="accent.400"
-    ml={{ base: "auto", lg: "3rem" }}
+    bg="primary.700"
+    ml={{ base: "auto", lg: "1.5rem" }}
     {...props}
   >
-    <Box size={6} color="primary.700" as={IoIosSearch} />
+    <Box size={27} color="accent.400" _hover={{ color: "white" }} as={IoIosSearch} />
   </Box>
 );
 
