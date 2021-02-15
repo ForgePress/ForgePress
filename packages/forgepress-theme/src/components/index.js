@@ -16,7 +16,6 @@ import PostCSS from "./custom-css/post";
 import DonateCSS from "./custom-css/donate";
 import HomeCSS from "./custom-css/home";
 import CSSTOC from "./custom-css/toc";
-import { useTransition, animated } from 'react-spring'
 
 // Theme is the root React component of our theme. The one we will export
 // in roots.
@@ -27,12 +26,6 @@ const Theme = ({ state, libraries }) => {
   // Check if the url is a search type
   const isSearch = Boolean(parse.query["s"]);
 
-  const transitions = useTransition(state.router.link, null , {
-    /*from:{ opacity:0 },
-    enter:{ opacity: 1 },
-    leave: { opacity:0 , display:"none"}
-    */
-  });
 
   return (
     <ChakraProvider

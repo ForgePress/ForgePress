@@ -34,7 +34,6 @@
     "@frontity/tiny-router": "^1.3.1",
     "@frontity/wp-source": "^1.11.1",
     "forgepress-theme": "./packages/forgepress-theme",
-    "frontity": "^1.14.1",
-    "react-spring": "^8.0.27"
+    "frontity": "^1.14.1"
   }
 }

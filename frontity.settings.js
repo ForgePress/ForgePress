@@ -119,7 +119,8 @@ const settings = {
         }
       }
     },
-    "@frontity/html2react"
+    "@frontity/html2react",
+    "@frontity/head-tags"
   ]
 };
 
