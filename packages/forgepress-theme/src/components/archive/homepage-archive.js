@@ -14,7 +14,7 @@ const HomepageArchive = ({ state, libraries }) => {
 
   // set homepage state
   if (state.theme.homepage) {
-      console.log("homepage set");
+      console.log("ForgePress v0.2.1");
       state.theme.isHome = true;
   }
 
