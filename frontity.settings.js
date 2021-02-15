@@ -82,8 +82,6 @@ const settings = {
               "100": "#fbe3b2",
               "200": "#f6d086",
               "300": "#f1be58",
-              //"400": "#eca419",
-              //"400": "aliceblue",
               "400": "lightgreen",
               "500": "#d49212",
               "600": "#a5710b",
@@ -99,7 +97,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://wordpress.forgepress.dev",
+          "url": "https://staging.forgepress.dev",
         },
       }
     },
